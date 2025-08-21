@@ -1,37 +1,78 @@
 <?xml version="1.0"?>
 <camposAgricolas>
-    <campo id="01" nombre="Campo agrícola 01">
-        <estacionesBase>
-            <estacion id="e01" nombre="Estacion 01"/>
-            <estacion id="e02" nombre="Estacion 02"/>
-            <estacion id="e03" nombre="Estacion 03"/>
-            <estacion id="e04" nombre="Estacion 04"/>
-            <estacion id="e05" nombre="Estacion 05"/>
-        </estacionesBase>
-        <sensoresSuelo>
-            <sensorS id="s01" nombre="Sensor S01">
-                <frecuencia idEstacion="e01"> 200 </frecuencia>
-                <frecuencia idEstacion="e03"> 500 </frecuencia>
-                <frecuencia idEstacion="e04"> 1500 </frecuencia>
-            </sensorS>
-            <sensorS id="s02" nombre="Sensor S02">
-                <frecuencia idEstacion="e01"> 300 </frecuencia>
-                <frecuencia idEstacion="e03"> 8000</frecuencia>
-            </sensorS>
-            <sensorS id="s03" nombre="Sensor S03">
-                <frecuencia idEstacion="e02"> 6000 </frecuencia>
-                <frecuencia idEstacion="e04"> 1500 </frecuencia>
-                <frecuencia idEstacion="e05"> 2000 </frecuencia>
-            </sensorS>
-        </sensoresSuelo>
-        <sensoresCultivo>
-            <sensorT id="t01" nombre="Sensor T01">
-                <frecuencia idEstacion="e01"> 3500 </frecuencia>
-                <frecuencia idEstacion="e02"> 2000 </frecuencia>
-                <frecuencia idEstacion="e03"> 1000 </frecuencia>
-                <frecuencia idEstacion="e04"> 950 </frecuencia>
-                <frecuencia idEstacion="e05"> 3200 </frecuencia>
-            </sensorT>
-        </sensoresCultivo>
-    </campo>
+  <campo id="01" nombre="Campo agrícola 01">
+    <estacionesBase>
+      <estacion id="e01" nombre="Estacion 01"/>
+      <estacion id="e02" nombre="Estacion 02"/>
+      <estacion id="e03" nombre="Estacion 03"/>
+      <estacion id="e04" nombre="Estacion 04"/>
+      <estacion id="e05" nombre="Estacion 05"/>
+    </estacionesBase>
+    <sensoresSuelo>
+      <sensorS id="s01" nombre="Sensor S01">
+        <frecuencia idEstacion="e01">200</frecuencia>
+        <frecuencia idEstacion="e03">500</frecuencia>
+        <frecuencia idEstacion="e04">1500</frecuencia>
+      </sensorS>
+      <sensorS id="s02" nombre="Sensor S02">
+        <frecuencia idEstacion="e01">300</frecuencia>
+        <frecuencia idEstacion="e03">8000</frecuencia>
+      </sensorS>
+      <sensorS id="s03" nombre="Sensor S03">
+        <frecuencia idEstacion="e02">6000</frecuencia>
+        <frecuencia idEstacion="e04">1500</frecuencia>
+        <frecuencia idEstacion="e05">2000</frecuencia>
+      </sensorS>
+    </sensoresSuelo>
+    <sensoresCultivo>
+      <sensorT id="t01" nombre="Sensor T01">
+        <frecuencia idEstacion="e01">3500</frecuencia>
+        <frecuencia idEstacion="e02">2000</frecuencia>
+        <frecuencia idEstacion="e03">1000</frecuencia>
+        <frecuencia idEstacion="e04">950</frecuencia>
+        <frecuencia idEstacion="e05">3200</frecuencia>
+      </sensorT>
+    </sensoresCultivo>
+  </campo>
+  <campo id="02" nombre="Campo agrícola 02">
+    <estacionesBase>
+      <estacion id="e06" nombre="Estacion 06"/>
+      <estacion id="e07" nombre="Estacion 07"/>
+      <estacion id="e08" nombre="Estacion 08"/>
+    </estacionesBase>
+    <sensoresSuelo>
+      <sensorS id="s04" nombre="Sensor S04">
+        <frecuencia idEstacion="e06">1000</frecuencia>
+        <frecuencia idEstacion="e07">2000</frecuencia>
+      </sensorS>
+      <sensorS id="s05" nombre="Sensor S05">
+        <frecuencia idEstacion="e08">3000</frecuencia>
+      </sensorS>
+    </sensoresSuelo>
+    <sensoresCultivo>
+      <sensorT id="t02" nombre="Sensor T02">
+        <frecuencia idEstacion="e06">1500</frecuencia>
+        <frecuencia idEstacion="e07">2500</frecuencia>
+        <frecuencia idEstacion="e08">3500</frecuencia>
+      </sensorT>
+    </sensoresCultivo>
+  </campo>
+  <campo id="03" nombre="Campo agrícola 03">
+    <estacionesBase>
+      <estacion id="e09" nombre="Estacion 09"/>
+      <estacion id="e10" nombre="Estacion 10"/>
+    </estacionesBase>
+    <sensoresSuelo>
+      <sensorS id="s06" nombre="Sensor S06">
+        <frecuencia idEstacion="e09">400</frecuencia>
+        <frecuencia idEstacion="e10">600</frecuencia>
+      </sensorS>
+    </sensoresSuelo>
+    <sensoresCultivo>
+      <sensorT id="t03" nombre="Sensor T03">
+        <frecuencia idEstacion="e09">1200</frecuencia>
+        <frecuencia idEstacion="e10">1800</frecuencia>
+      </sensorT>
+    </sensoresCultivo>
+  </campo>
 </camposAgricolas>
