@@ -1,4 +1,3 @@
-# graficador.py
 from graphviz import Digraph
 
 def graficar_matriz(matriz, nombre_archivo):

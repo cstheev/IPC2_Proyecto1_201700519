@@ -1,4 +1,3 @@
-# procesador.py
 import xml.etree.ElementTree as ET
 from modelo import CampoAgricola, EstacionBase, SensorSuelo, SensorCultivo
 from lista import Lista

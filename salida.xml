@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<camposAgricolas>
+    <campo id="01" nombre="Campo agrícola 01">
+        <estacionesBaseReducidas>
+            <estacion id="e01" nombre="e01, e03" />
+            <estacion id="e02" nombre="e02, e05" />
+            <estacion id="e03" nombre="e04" />
+        </estacionesBaseReducidas>
+        <sensoresSuelo>
+            <SensorSuelo id="s01" nombre="Sensor S01">
+                <frecuencia idEstacion="e01">700</frecuencia>
+                <frecuencia idEstacion="e03">1500</frecuencia>
+            </SensorSuelo>
+            <SensorSuelo id="s02" nombre="Sensor S02">
+                <frecuencia idEstacion="e01">8300</frecuencia>
+            </SensorSuelo>
+            <SensorSuelo id="s03" nombre="Sensor S03">
+                <frecuencia idEstacion="e02">8000</frecuencia>
+                <frecuencia idEstacion="e03">1500</frecuencia>
+            </SensorSuelo>
+        </sensoresSuelo>
+        <sensoresCultivo>
+            <SensorCultivo id="t01" nombre="Sensor T01">
+                <frecuencia idEstacion="e01">4500</frecuencia>
+                <frecuencia idEstacion="e02">5200</frecuencia>
+                <frecuencia idEstacion="e03">950</frecuencia>
+            </SensorCultivo>
+        </sensoresCultivo>
+    </campo>
+</camposAgricolas>

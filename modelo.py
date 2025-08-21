@@ -1,4 +1,5 @@
-# modelo.py
+from lista import Lista
+
 class EstacionBase:
     def __init__(self, id, nombre):
         self.id = id

@@ -1,4 +1,3 @@
-# lista.py
 from nodo import Nodo
 
 class Lista:
