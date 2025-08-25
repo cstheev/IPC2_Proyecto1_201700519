@@ -1,4 +1,4 @@
-from lista import Lista
+from lista import Lista, DiccionarioEnlazado
 
 class EstacionBase:
     def __init__(self, id, nombre):
@@ -9,13 +9,13 @@ class SensorSuelo:
     def __init__(self, id, nombre):
         self.id = id
         self.nombre = nombre
-        self.frecuencias = {}  # idEstacion: frecuencia
+        self.frecuencias = DiccionarioEnlazado()
 
 class SensorCultivo:
     def __init__(self, id, nombre):
         self.id = id
         self.nombre = nombre
-        self.frecuencias = {}
+        self.frecuencias = DiccionarioEnlazado()
 
 class CampoAgricola:
     def __init__(self, id, nombre):
@@ -24,3 +24,4 @@ class CampoAgricola:
         self.estaciones = Lista()
         self.sensores_suelo = Lista()
         self.sensores_cultivo = Lista()
+        self._matrices = None  # se mantiene para compatibilidad
