@@ -14,8 +14,9 @@ def menu():
         print("6. Salida")
 
         opcion = input("Seleccione una opción: ")
+
         if opcion == "1":
-            ruta = input("Escriba la ruta del archivo: ")
+            ruta = input("Escriba la ruta y nombre del archivo: ")
             campos = cargar_xml(ruta)
             print("- El archivo fue cargado correctamente.")
         elif opcion == "2":
@@ -30,13 +31,13 @@ def menu():
                 patrones_cultivo = generar_matriz_patron(matriz_cultivo)
                 grupos = agrupar_estaciones(patrones_suelo, patrones_cultivo)
                 campo._matrices = (matriz_suelo, matriz_cultivo, grupos)
-                print("- Procesando matriz...")
+                print(f"- Procesando matriz {campo.id}: {campo.nombre}")
             print("- Procesamiento completo.")
         elif opcion == "3":
             if campos is None:
                 print("- Primero debes cargar y procesar un archivo.")
                 continue
-            ruta = input("Escriba la ruta de salida: ")
+            ruta = input("Escriba el nombre del archivo de salida: ")
             for campo in campos.recorrer():
                 if campo._matrices is None:
                     print(f"- El campo {campo.id} no ha sido procesado.")
