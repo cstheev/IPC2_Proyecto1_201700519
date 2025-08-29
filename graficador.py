@@ -11,3 +11,15 @@ def graficar_matriz(matriz, nombre_archivo):
                 dot.edge(est_id, sensor_id, label=str(freq))
 
     dot.render(nombre_archivo, format='png', cleanup=True)
+
+def graficar_patrones(patrones, nombre_archivo):
+    dot = Digraph()
+
+    for est_id, patron in patrones.recorrer():
+        dot.node(est_id, est_id)
+        for i, valor in enumerate(patron.recorrer()):
+            nodo_patron = f"{est_id}_p{i}"
+            dot.node(nodo_patron, str(valor))
+            dot.edge(est_id, nodo_patron)
+
+    dot.render(nombre_archivo, format='png', cleanup=True)

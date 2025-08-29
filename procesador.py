@@ -51,6 +51,36 @@ def generar_matriz_patron(matriz):
         patrones.asignar(est_id, patron)
     return patrones
 
+def generar_matriz_reducida(matriz_original, grupos):
+    matriz_reducida = DiccionarioEnlazado()
+
+    for grupo in grupos.recorrer():
+        # Crear un ID único para el grupo
+        ids = [est_id for est_id in grupo.estaciones.recorrer()]
+        id_grupo = "_".join(ids)
+        submatriz = DiccionarioEnlazado()
+
+        sensores = set()
+        for est_id in ids:
+            sensores_dict = matriz_original.obtener(est_id)
+            if sensores_dict:
+                for sensor_id, _ in sensores_dict.recorrer():
+                    sensores.add(sensor_id)
+
+        for sensor_id in sensores:
+            total = 0
+            for est_id in ids:
+                sensores_dict = matriz_original.obtener(est_id)
+                if sensores_dict:
+                    freq = sensores_dict.obtener(sensor_id)
+                    if freq:
+                        total += freq
+            submatriz.asignar(sensor_id, total)
+
+        matriz_reducida.asignar(id_grupo, submatriz)
+
+    return matriz_reducida
+
 def agrupar_estaciones(patrones_suelo, patrones_cultivo):
     grupos = Lista()
 
